@@ -1,0 +1,13 @@
+{
+  "name": "forensic-blockchain-benchmarks",
+  "version": "1.0.0",
+  "description": "Hyperledger Caliper benchmarks for cyberbullying forensic blockchain",
+  "main": "index.js",
+  "scripts": {
+    "benchmark": "npx caliper launch manager --config config.yaml --network network/fabric-network.yaml --benchmark benchmarks/forensic-benchmark.yaml"
+  },
+  "dependencies": {
+    "@hyperledger/caliper-core": "^0.5.0",
+    "@hyperledger/caliper-fabric": "^0.5.0"
+  }
+}

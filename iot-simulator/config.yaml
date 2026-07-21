@@ -1,0 +1,40 @@
+# IoT Device Simulator Configuration
+# Based on Section 3.1 of the paper
+
+num_devices: 10
+
+device_config:
+  broker_host: "localhost"
+  broker_port: 1883
+  topic_submit: "evidence/submit"
+  evidence_types:
+    - "text"
+    - "audio"
+    - "location"
+  buffer_limit: 10
+
+# Device type distribution
+device_types:
+  smartphone: 60
+  wearable: 25
+  smart_home: 15
+
+# Evidence distribution
+evidence_distribution:
+  text: 70
+  audio: 10
+  location: 20
+
+# Packet size characterization (bytes)
+packet_sizes:
+  text: 512      # Encrypted text + RSA key
+  audio_metadata: 500
+  location: 384
+  metadata: 512
+  large_audio: 160000  # 10-second MP3
+
+# Storage requirements
+storage:
+  on_chain_per_tx: 2.5    # KB
+  off_chain_audio: 160    # KB
+  off_chain_video: 50000  # KB
