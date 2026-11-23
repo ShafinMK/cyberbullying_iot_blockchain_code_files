@@ -1,0 +1,41 @@
+seed: 42
+network:
+  validators_m: 10
+  committee_k: 4
+  inter_node_latency_ms: [2, 5]
+  fabric_version: "2.5"
+  caliper_version: "0.5.0"
+  warmup_s: 120
+  steady_state_s: 300
+  runs: 5
+workload:
+  tx_type_payload_kb:
+    add_evidence: 2.5
+    get_data: 0.2
+    get_evidence: 0.2
+    get_analysis: 0.2
+    query_forensic_doc: 0.2
+    acquire_data: 2.5
+    add_analysis: 1.5
+    create_forensic_doc: 8.0
+    update_evidence: 1.5
+  packet_sizes_b:
+    text: 512
+    location: 384
+    audio_metadata: 500
+  evidence_mix: {text: 0.70, location: 0.20, audio: 0.10}
+  tx_volumes: [100, 300, 500, 700, 900, 1100, 1300, 1500, 1700, 1900, 2100, 2300, 2500, 2700, 2900, 3000]
+consensus:
+  w_U: 0.30
+  w_V: 0.30
+  w_R: 0.40
+  reselect_every_blocks: 500
+  pbft_quorum_frac: 0.6666667
+  stake_range: [0.05, 0.15]
+crypto:
+  keywrap: RSA-2048-OAEP
+  hash: SHA-256
+  consent_sig: ECDSA-P256
+rbac:
+  roles: [LE, FE, JU, EM, SA]
+  expiry_days: {LE: 30, FE: 90, JU: -1, EM: -1, SA: -1}

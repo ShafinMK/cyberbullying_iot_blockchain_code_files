@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+title: "Reproducibility companion: A blockchain-driven forensic framework for secure cyberbullying evidence collection in IoT environments"
+authors:
+  - family-names: "Shafin"
+    given-names: "Khandakar Md"
+  - family-names: "Reno"
+    given-names: "Saha"
+year: 2026
+references:
+  - type: article
+    doi: "10.1038/s41598-026-64205-4"
+    title: "A blockchain-driven forensic framework for secure cyberbullying evidence collection in IoT environments"
+    journal: "Scientific Reports"
+    volume: 16
+    start: 34038
+license: MIT

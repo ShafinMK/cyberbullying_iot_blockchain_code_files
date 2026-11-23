@@ -1,0 +1,12 @@
+test:
+  name: add-evidence
+  workers: {number: 10}
+  rounds:
+    - label: AddEvidence
+      txNumber: 3000
+      rateControl: {type: fixed-rate, opts: {tps: 200}}
+      workload: {module: workloads/addEvidence.js}
+    - label: GetData
+      txNumber: 3000
+      rateControl: {type: fixed-rate, opts: {tps: 200}}
+      workload: {module: workloads/getData.js}
