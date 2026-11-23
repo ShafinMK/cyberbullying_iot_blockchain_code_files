@@ -90,9 +90,7 @@ python experiments/reproduce_all.py
 
 Here is the properly formatted Markdown for your `README.md` file:
 
-markdown
-
-````markdown
+```
 
 # How to Reproduce the Work
 
